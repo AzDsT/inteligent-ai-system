@@ -140,11 +140,10 @@ def fine_tune_model(train_data):
             optimizer.step()
 
 def analyze_feedback(feedback_data):
-    # Performed analysis on the feedback data
-    # Extract insights, identify areas for improvement, etc.
-    # Implementation optimization strategies based on the analysis
-    fine_tune_model(labeled_data)
-
+    feedback_sentiments = analyze_sentiments(feedback_data['comments'])
+    additional_labeled_data = create_labeled_data(feedback_data['comments'], feedback_sentiments)
+    fine_tune_model(model, labeled_data + additional_labeled_data)
+    
 feedback_data = pd.read_csv("customer_feedback.csv") 
 labeled_data = pd.read_csv("labeled_data.csv")  
 analyze_feedback(feedback_data)
