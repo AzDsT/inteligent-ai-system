@@ -1,4 +1,4 @@
-# inteligent-ai-system
+# intelligent-ai-system
 
 Abstract:
 This project aims to develop an intelligent virtual assistant for customer service that utilizes natural language processing and artificial intelligence. The intelligent virtual assistant will be capable of understanding customer inquiries and assisting customer service agents in resolving issues more efficiently.
