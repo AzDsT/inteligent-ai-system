@@ -54,7 +54,7 @@ num_classes = 5
 model = IntentClassifier(num_classes)
 
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-text = " "
+text = "Can you help me track my order"
 input_ids = tokenizer.encode(text, add_special_tokens=True)
 attention_mask = [1] * len(input_ids)
 input_ids = torch.tensor([input_ids])
